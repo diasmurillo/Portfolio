@@ -1,6 +1,21 @@
 import { useState } from "react"
 import { FaMoon } from "react-icons/fa6";
 import { LuSun } from "react-icons/lu";
+
+import github  from './assets/icon-github.png'
+import githubColor from './assets/icon-github-color.png'
+import linkedin from './assets/icon-linkedin.png'
+import css from './assets/logo-css.png'
+import figma from './assets/logo-figma.png'
+import git from './assets/logo-git.png'
+import html from './assets/logo-html.png'
+import js from './assets/logo-js.png'
+import react from './assets/logo-react.png'
+import tailwind from './assets/logo-tailwind.png'
+import vite from './assets/logo-vite.png'
+import logoWhite from './assets/logo-white.png'
+import logo from './assets/logo.png'
+import me from './assets/me.jpg'
 export default function App() {
 
   const [menuOpen, setMenuOpen] = useState(false)
@@ -11,9 +26,9 @@ export default function App() {
       <header className="font-inter shadow-md">
         <nav className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
           {darkMode == '' ? 
-            <img className="w-20" src="/logo.png" alt="Logo" />
+            <img className="w-20" src={logo} alt="Logo" />
             : 
-            <img className="w-20" src="/logo-white.png" alt="logo"/>
+            <img className="w-20" src={logoWhite} alt="logo"/>
           }
 
           <button
@@ -109,7 +124,7 @@ export default function App() {
 
             <article className="md:w-1/2 flex justify-center">
               <img
-                src="/me.jpg"
+                src={me}
                 alt="Foto de Murilo"
                 className="w-60 h-60 object-cover rounded-full shadow-lg"
               />
@@ -127,14 +142,14 @@ export default function App() {
             </div>
           </div>
           <section className="flex flex-wrap items-center justify-center gap-8 mb-16">
-            <img src="/logo-html.png" alt="icon html" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="/logo-css.png" alt="icon css" className="w-18 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="/logo-react.png" alt="icon react" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="/logo-js.png" alt="icon javascript" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="logo-vite.png" alt="icon vite" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="/logo-figma.png" alt="icon figma" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="/logo-git.png" alt="icon git" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src="/logo-tailwind.png" alt="icon tailwind" className="w-30 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={html} alt="icon html" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={css} alt="icon css" className="w-18 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={react} alt="icon react" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={js} alt="icon javascript" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={vite} alt="icon vite" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={figma} alt="icon figma" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={git} alt="icon git" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={tailwind} alt="icon tailwind" className="w-30 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
           </section>
         </section>
         
@@ -148,12 +163,12 @@ export default function App() {
             </div>
           </div>
           <section className="flex flex-wrap gap-10 mb-20">
-            <article className="text-white rounded-2xl shadow-lg  max-w-sm mx-auto space-y-4 hover:scale-102 transition duration-300">
+            <article className="text-white rounded-2xl shadow-lg  max-w-sm mx-auto space-y-4 border-b  hover:scale-102 transition duration-300">
               <div className="bg-black w-full dark:bg-white">
                 {darkMode == '' ? 
-                <img className="w-30 mx-auto" src="/logo-white.png" alt="Logo"/>
+                <img className="w-30 mx-auto" src={logoWhite} alt="Logo"/>
                 : 
-                <img className="w-30 mx-auto" src="/logo.png" alt="logo"/>
+                <img className="w-30 mx-auto" src={logo} alt="logo"/>
                 }
               </div>
               <div className="p-6 flex flex-col gap-4">
@@ -191,13 +206,13 @@ export default function App() {
         <footer className="max-w-7xl mx-auto mt-16 font-inter dark:text-white">
           <section className="flex items-center gap-10 justify-center">
             <a href="https://www.linkedin.com/in/murilo-dias-672928242/" target="blank">
-              <img src="/icon-linkedin.png" alt="Logo Linkedin" className="grayscale hover:grayscale-0 dark:grayscale-0" />
+              <img src={linkedin} alt="Logo Linkedin" className="grayscale hover:grayscale-0 dark:grayscale-0" />
             </a>
             <a href="https://github.com/diasmurillo" target="blank">
               {darkMode == '' ?
-                <img src="/icon-github.png" alt="Logo GitHub " className="w-10 grayscale hover:grayscale-0"/>
+                <img src={github} alt="Logo GitHub " className="w-10 grayscale hover:grayscale-0"/>
                 :
-                <img src="/icon-github-color.png" alt="Logo GitHub" className="w-10"/>
+                <img src={githubColor} alt="Logo GitHub" className="w-10"/>
               }
             </a>
           </section>
