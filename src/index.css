@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  --color-primary: #0037A6;
+  --color-title: #000000;
+  --color-hover: #0050E0;
+  --color-color-text: #1F2937;
+  --color-background: #FFFFFF;
+
+  --font-inter: "Inter", sans-serif;
+  --font-ibm-mono: "IBM Plex Mono", monospace;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
+}
