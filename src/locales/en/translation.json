@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "About",
+    "tech": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello, I am",
+    "title": "Front-End Developer",
+    "desc": "I build purposeful interfaces — accessible, intuitive, and made for real people.",
+    "button": "Get in touch"
+  },
+  "about": {
+    "title": "About",
+    "text": "Hi! I'm Murilo, a front-end developer focused on creating accessible, intuitive digital experiences that make a difference. I love working on challenging projects that allow me to learn and explore the potential of ever-evolving web technologies. I'm always looking for better and more inclusive solutions to everyday challenges, with a strong focus on the user and code quality."
+  },
+  "tech": {
+    "title": "Technologies"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "portfolioDesc": "Portfolio built with React + Vite, styled with Tailwind, and featuring multi-language support using i18n.",
+    "viewCode": "View Code"
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "At the moment, I'm looking for full-time opportunities as a front-end developer. If you liked what you saw or have any questions, suggestions, or just want to chat, feel free to get in touch. My inbox is always open, and I'll do my best to respond as soon as possible."
+  },
+  "footer": {
+    "thanks": "Thanks for visiting! © 2025 Murilo Dias"
+  }
+}

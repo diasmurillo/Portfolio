@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "tech": "Tecnologias",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "hello": "Olá, eu sou",
+    "title": "Desenvolvedor Front-End",
+    "desc": "Desenvolvo interfaces com propósito — acessíveis, intuitivas e feitas para pessoas reais.",
+    "button": "Entre em contato"
+  },
+  "about": {
+    "title": "Sobre",
+    "text": "Olá! Eu sou o Murilo, desenvolvedor front-end focado em criar experiências digitais acessíveis, intuitivas e que façam a diferença. Adoro trabalhar em projetos desafiadores que me permitam aprender e explorar o potencial das tecnologias web em constante evolução. Estou sempre buscando soluções melhores e inclusivas para os desafios do dia a dia, com foco no usuário e na qualidade do código."
+  },
+  "tech": {
+    "title": "Tecnologias"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "portfolioDesc": "Portfólio criado com React + Vite, estilizado com Tailwind e suporte a tradução com i18n.",
+    "viewCode": "Ver Código"
+  },
+  "contact": {
+    "title": "Contato",
+    "text": "No momento, estou em busca de oportunidades para atuar em tempo integral como desenvolvedor front-end. Se você gostou do que viu ou tem alguma dúvida, sugestão ou só quiser trocar uma ideia, fique à vontade para entrar em contato. Minha caixa de entrada está sempre aberta e farei o possível para responder o quanto antes."
+  },
+  "footer": {
+    "thanks": "Obrigado por visitar! © 2025 Murilo Dias"
+  }
+}

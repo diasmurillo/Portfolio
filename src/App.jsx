@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { FaMoon } from "react-icons/fa6";
 import { LuSun } from "react-icons/lu";
+import "./i18n";
+import { useTranslation } from "react-i18next";
 
 import github  from './assets/icon-github.png'
 import githubColor from './assets/icon-github-color.png'
@@ -20,15 +22,17 @@ export default function App() {
 
   const [menuOpen, setMenuOpen] = useState(false)
   const [darkMode, setDarkMode] = useState('')
+  const { t, i18n } = useTranslation();
+
 
   return(
     <div className={`${darkMode ? "dark" : ""} dark:bg-zinc-800`}>
       <header className="font-inter shadow-md">
-        <nav className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
+        <nav className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto font-ibm-mono">
           {darkMode == '' ? 
-            <img className="w-20" src={logo} alt="Logo" />
+            <a href="#home"><img className="w-20 cursor-pointer" src={logo} alt="Logo" /></a> 
             : 
-            <img className="w-20" src={logoWhite} alt="logo"/>
+            <a href="#home"><img className="w-20" src={logoWhite} alt="logo"/></a>
           }
 
           <button
@@ -40,22 +44,22 @@ export default function App() {
 
           <ul className="hidden md:flex justify-center space-x-8 dark:text-white">
             <li>
-              <a href="#sobre" className="cursor-pointer hover:text-primary">Sobre</a>
+              <a href="#sobre" className="cursor-pointer hover:text-primary">{t("nav.about")}</a>
             </li>
             <li>
-              <a href="#tecnologias" className="cursor-pointer hover:text-primary">Tecnologias</a>
+              <a href="#tecnologias" className="cursor-pointer hover:text-primary">{t("nav.tech")}</a>
             </li>
             <li>
-              <a href="#projetos" className="cursor-pointer hover:text-primary">Projetos</a>
+              <a href="#projetos" className="cursor-pointer hover:text-primary">{t("nav.projects")}</a>
             </li>
             <li>
-              <a href="#contato" className="cursor-pointer hover:text-primary">Contato</a>
+              <a href="#contato" className="cursor-pointer hover:text-primary">{t("nav.contact")}</a>
             </li>
           </ul>
 
           <div className="hidden md:flex space-x-2 dark:text-white">
-            <button className="cursor-pointer px-3 py-1 border rounded">PT</button>
-            <button className="cursor-pointer px-3 py-1 border rounded">EN</button>
+            <button onClick={() => i18n.changeLanguage("pt")} className="cursor-pointer px-3 py-1 border rounded">PT</button>
+            <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer px-3 py-1 border rounded">EN</button>
             <button
               className="cursor-pointer px-3 py-1 border rounded"
               onClick={() => setDarkMode(!darkMode)}
@@ -68,14 +72,14 @@ export default function App() {
         {menuOpen && (
           <div className="md:hidden px-4 py-2 space-y-2 bg-white shadow dark:text-white dark:bg-zinc-800">
             <ul className="flex flex-col space-y-2">
-              <li><a href="#sobre" className="hover:text-primary">Sobre</a></li>
-              <li><a href="#tecnologias" className="hover:text-primary">Tecnologias</a></li>
-              <li><a href="#projetos" className="hover:text-primary">Projetos</a></li>
-              <li><a href="#contato" className="hover:text-primary">Contato</a></li>
+              <li><a href="#sobre" className="hover:text-primary">{t("nav.about")}</a></li>
+              <li><a href="#tecnologias" className="hover:text-primary">{t("nav.tech")}</a></li>
+              <li><a href="#projetos" className="hover:text-primary">{t("nav.projects")}</a></li>
+              <li><a href="#contato" className="hover:text-primary">{t("nav.contact")}</a></li>
             </ul>
             <div className="flex space-x-2 mt-4">
-              <button className="px-3 py-1 border rounded">PT</button>
-              <button className="px-3 py-1 border rounded">EN</button>
+              <button onClick={() => i18n.changeLanguage("pt")} className="cursor-pointer px-3 py-1 border rounded">PT</button>
+              <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer px-3 py-1 border rounded">EN</button>
               <button
                 className="px-3 py-1 border rounded"
                 onClick={() => setDarkMode(!darkMode)}
@@ -88,16 +92,16 @@ export default function App() {
       </header>
       <main className="">
         {/* Apresentação */}
-        <section className="mt-32 mb-0 px-4 text-center md:mb-0 md:[min-height:calc(100vh-200px)] md:mt-32 pt-16 dark:text-white">
+        <section id="home" className="mt-32 mb-0 px-4 text-center md:mb-0 md:[min-height:calc(100vh-200px)] md:mt-32 pt-16 dark:text-white">
           <div className="max-w-7xl mx-auto text-center text-justify md:text-left">
-            <p className="font-ibm-mono text-3xl mb-2">Olá, eu sou</p>
+            <p className="font-ibm-mono text-3xl mb-2">{t("hero.hello")}</p>
             <h1 className="text-7xl font-bold mb-2">Murilo Dias</h1>
-            <h3 className="text-4xl text-primary mb-4">Desenvolvedor Front-End</h3>
+            <h3 className="text-4xl text-primary mb-4">{t("hero.title")}</h3>
             <p className="text-lg text-color-text font-ibm-mono dark:text-white">
-              Desenvolvo interfaces com propósito — acessíveis, intuitivas e feitas para pessoas reais.
+              {t("hero.desc")}
             </p>
             <a href="mailto:dias.murilosd@gmail.com">
-                <button className="mt-6 px-6 py-3 bg-primary cursor-pointer text-white rounded-xl shadow-md hover:bg-primary/90 transition">Entre em contato</button>
+                <button className="mt-6 px-6 py-3 bg-primary cursor-pointer text-white rounded-xl shadow-md hover:bg-primary/90 transition">{t("hero.button")}</button>
               </a>
           </div>
         </section>
@@ -107,7 +111,7 @@ export default function App() {
           <div className="flex items-center justify-center mb-20">
             <div className="flex items-center w-full max-w-7xl gap-4">
               <span className="flex-grow h-px bg-gray-400"></span>
-              <h2 className="text-4xl font-semibold text-center whitespace-nowrap">Sobre</h2>
+              <h2 className="text-4xl font-semibold text-center whitespace-nowrap">{t("about.title")}</h2>
               <span className="flex-grow h-px bg-gray-400"></span>
             </div>
           </div>
@@ -116,9 +120,7 @@ export default function App() {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-">
             <article className="md:w-1/2">
               <p className="text-lg text-justify text-color-text leading-relaxed font-ibm-mono dark:text-white">
-                Olá! Eu sou o Murilo, desenvolvedor front-end focado em criar experiências digitais acessíveis, intuitivas e que façam a diferença.
-                Adoro trabalhar em projetos desafiadores que me permitam aprender e explorar o potencial das tecnologias web em constante evolução.
-                Estou sempre buscando soluções melhores e inclusivas para os desafios do dia a dia, com foco no usuário e na qualidade do código.
+                {t("about.text")}
               </p>
             </article>
 
@@ -137,7 +139,7 @@ export default function App() {
           <div className="flex items-center justify-center mb-20">
             <div className="flex items-center w-full max-w-7x1 gap-4">
               <span className="flex-grow h-px bg-gray-400"></span>
-              <h2 className="text-4xl font-semibold text-center whitespace-nowrap">Tecnologias</h2>
+              <h2 className="text-4xl font-semibold text-center whitespace-nowrap">{t("tech.title")}</h2>
               <span className="flex-grow h-px bg-gray-400"></span>
             </div>
           </div>
@@ -158,7 +160,7 @@ export default function App() {
           <div className="flex items-center justify-center mb-20">
             <div className="flex items-center w-full max-w-7xl gap-4">
               <span className="flex-grow h-px bg-gray-400"></span>
-              <h2 className="text-4xl font-semibold text-center whitespace-nowrap">Projetos</h2>
+              <h2 className="text-4xl font-semibold text-center whitespace-nowrap">{t("projects.title")}</h2>
               <span className="flex-grow h-px bg-gray-400"></span>
             </div>
           </div>
@@ -172,12 +174,12 @@ export default function App() {
                 }
               </div>
               <div className="p-6 flex flex-col gap-4">
-                <h3 className="text-3xl font-bold text-black dark:text-white">Portfolio</h3>
+                <h3 className="text-3xl font-bold text-black dark:text-white">{t("projects.title")}</h3>
                 <p className="text-lg text-color-text font-ibm-mono dark:text-white">
-                  Aqui vai ir o projeto do meu Portfolio 
+                  {t("projects.portfolioDesc")}
                 </p>
                 <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
-                  Ver Código
+                  <a href="https://github.com/diasmurillo/Portfolio" target="blank">{t("projects.viewCode")}</a>
                 </button>
               </div>
             </article>
@@ -189,15 +191,16 @@ export default function App() {
             <div className="flex items-center justify-center mb-20">
               <div className="flex items-center w-full max-w-7xl gap-4">
                 <span className="flex-grow h-px bg-gray-400"></span>
-                <h2 className="text-4xl font-semibold text-center whitespace-nowrap dark:text-white">Contato</h2>
+                <h2 className="text-4xl font-semibold text-center whitespace-nowrap dark:text-white">{t("contact.title")}</h2>
                 <span className="flex-grow h-px bg-gray-400"></span>
               </div>
             </div>
             <article>
-              <p className="font-ibm-mono text-justify dark:text-white" >No momento, estou em busca de oportunidades para atuar em tempo integral como desenvolvedor front-end.
-                  Se você gostou do que viu ou tem alguma dúvida, sugestão ou só quiser trocar uma ideia, fique à vontade para entrar em contato. Minha caixa de entrada está sempre aberta e farei o possível para responder o quanto antes.</p>
+              <p className="font-ibm-mono text-justify dark:text-white" >
+                {t("contact.text")}
+              </p>
               <a href="mailto:dias.murilosd@gmail.com">
-                <button className="mt-6 px-6 py-3 bg-primary cursor-pointer text-white rounded-xl shadow-md hover:bg-primary/90 transition">Entre em contato</button>
+                <button className="mt-6 px-6 py-3 bg-primary cursor-pointer text-white rounded-xl shadow-md hover:bg-primary/90 transition">{t("hero.button")}</button>
               </a>
             </article>
           </section>
