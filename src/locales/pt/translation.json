@@ -23,6 +23,12 @@
     "portfolioDesc": "Portfólio criado com React + Vite, estilizado com Tailwind e suporte a tradução com i18n.",
     "viewCode": "Ver Código"
   },
+   "projectLibrary": {
+    "title": "Biblioteca",
+    "libraryDesc": "Projeto criado com React + Vite, estilizado com Tailwind. Consiste em um site com autenticação, onde pode ser feito o aluguel de livros.",
+    "viewCode": "Ver Código",
+    "viewSite": "Ver Site"
+  },
   "contact": {
     "title": "Contato",
     "text": "No momento, estou em busca de oportunidades para atuar em tempo integral como desenvolvedor front-end. Se você gostou do que viu ou tem alguma dúvida, sugestão ou só quiser trocar uma ideia, fique à vontade para entrar em contato. Minha caixa de entrada está sempre aberta e farei o possível para responder o quanto antes."

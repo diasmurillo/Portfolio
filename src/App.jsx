@@ -18,6 +18,8 @@ import vite from './assets/logo-vite.png'
 import logoWhite from './assets/logo-white.png'
 import logo from './assets/logo.png'
 import me from './assets/me.jpg'
+import logoWhiteLibrary from './assets/logo-white-library.png'
+import logoLibrary from './assets/logo-library.png'
 export default function App() {
 
   const [menuOpen, setMenuOpen] = useState(false)
@@ -66,6 +68,7 @@ export default function App() {
             >
               {darkMode ? <LuSun /> : <FaMoon />}
             </button>
+            <a href="https://drive.google.com/file/d/12JOyZh-uggHlf9ZiNdb5Q9yXAGm4ua1M/view?usp=sharing" target="blank"><button className="cursor-pointer px-3 py-1 border rounded">CV</button></a>
           </div>
         </nav>
 
@@ -144,14 +147,14 @@ export default function App() {
             </div>
           </div>
           <section className="flex flex-wrap items-center justify-center gap-8 mb-16">
-            <img src={html} alt="icon html" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={css} alt="icon css" className="w-18 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={react} alt="icon react" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={js} alt="icon javascript" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={vite} alt="icon vite" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={figma} alt="icon figma" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={git} alt="icon git" className="w-20 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
-            <img src={tailwind} alt="icon tailwind" className="w-30 grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={html} alt="icon html" className="w-20 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={css} alt="icon css" className="w-18 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={react} alt="icon react" className="w-20 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={js} alt="icon javascript" className="w-20 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={vite} alt="icon vite" className="w-20 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={figma} alt="icon figma" className="w-20 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={git} alt="icon git" className="w-20 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
+            <img src={tailwind} alt="icon tailwind" className="w-30 md:grayscale hover:grayscale-0 transition duration-300 dark:grayscale-0"/>
           </section>
         </section>
         
@@ -164,26 +167,55 @@ export default function App() {
               <span className="flex-grow h-px bg-gray-400"></span>
             </div>
           </div>
+          <section className="flex flex-wrap gap-10 justify-center">
+            <section className="flex flex-wrap gap-10 mb-20">
+              <article className="flex flex-col justify-between text-white rounded-2xl shadow-lg  max-w-sm mx-auto space-y-4 border-b  hover:scale-102 transition duration-300">
+                <div className="bg-black w-full dark:bg-white">
+                  {darkMode == '' ? 
+                  <img className="w-30 mx-auto" src={logoWhite} alt="Logo"/>
+                  : 
+                  <img className="w-30 mx-auto" src={logo} alt="logo"/>
+                  }
+                </div>
+                <div className="p-6 flex flex-col gap-4">
+                  <h3 className="text-3xl font-bold text-black dark:text-white">{t("projects.title")}</h3>
+                  <p className="text-lg text-color-text font-ibm-mono dark:text-white">
+                    {t("projects.portfolioDesc")}
+                  </p>
+                  <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
+                    <a href="https://github.com/diasmurillo/Portfolio" target="blank">{t("projects.viewCode")}</a>
+                  </button>
+                </div>
+              </article>
+          </section>
+
           <section className="flex flex-wrap gap-10 mb-20">
-            <article className="text-white rounded-2xl shadow-lg  max-w-sm mx-auto space-y-4 border-b  hover:scale-102 transition duration-300">
+            <article className="flex flex-col justify-between text-white rounded-2xl shadow-lg  max-w-sm mx-auto space-y-4 border-b  hover:scale-102 transition duration-300">
               <div className="bg-black w-full dark:bg-white">
                 {darkMode == '' ? 
-                <img className="w-30 mx-auto" src={logoWhite} alt="Logo"/>
+                <img className="w-30 mx-auto" src={logoWhiteLibrary} alt="Logo"/>
                 : 
-                <img className="w-30 mx-auto" src={logo} alt="logo"/>
+                <img className="w-30 mx-auto" src={logoLibrary} alt="logo"/>
                 }
               </div>
               <div className="p-6 flex flex-col gap-4">
-                <h3 className="text-3xl font-bold text-black dark:text-white">{t("projects.title")}</h3>
+                <h3 className="text-3xl font-bold text-black dark:text-white">{t("projectLibrary.title")}</h3>
                 <p className="text-lg text-color-text font-ibm-mono dark:text-white">
-                  {t("projects.portfolioDesc")}
+                  {t("projectLibrary.libraryDesc")}
                 </p>
-                <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
-                  <a href="https://github.com/diasmurillo/Portfolio" target="blank">{t("projects.viewCode")}</a>
+                <div className="flex gap-4">
+                  <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
+                  <a href="https://github.com/diasmurillo/Library" target="blank">{t("projectLibrary.viewCode")}</a>
                 </button>
+                <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
+                  <a href="https://github.com/diasmurillo/Library" target="blank">{t("projectLibrary.viewSite")}</a>
+                </button>
+                </div>
               </div>
             </article>
           </section>
+          </section>
+          
         </section>
 
           {/*Contato*/}
