@@ -89,6 +89,7 @@ export default function App() {
               >
                 {darkMode ? <LuSun /> : <FaMoon />}
               </button>
+              <a href="https://drive.google.com/file/d/12JOyZh-uggHlf9ZiNdb5Q9yXAGm4ua1M/view?usp=sharing" target="blank"><button className="cursor-pointer px-3 py-1 border rounded">CV</button></a>
             </div>
           </div>
         )}
