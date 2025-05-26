@@ -208,9 +208,7 @@ export default function App() {
                   <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
                   <a href="https://github.com/diasmurillo/Library" target="blank">{t("projectLibrary.viewCode")}</a>
                 </button>
-                <button className="w-fit px-4 py-2 bg-color-text text-white rounded cursor-pointer hover:bg-color-text/90 transition dark:bg-white dark:text-color-text dark:hover:bg-white/90">
-                  <a href="https://github.com/diasmurillo/Library" target="blank">{t("projectLibrary.viewSite")}</a>
-                </button>
+                
                 </div>
               </div>
             </article>
