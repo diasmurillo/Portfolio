@@ -18,7 +18,10 @@
   "tech": {
     "title": "Technologies"
   },
-  "projects": {
+   "projects": {
+    "title": "Projects"
+  },
+  "projectPortfolio": {
     "title": "Portfolio",
     "portfolioDesc": "Portfolio built with React + Vite, styled with Tailwind, and featuring multi-language support using i18n.",
     "viewCode": "View Code"
@@ -26,6 +29,12 @@
   "projectLibrary": {
     "title": "Library",
     "libraryDesc": "Project built with React + Vite, styled with Tailwind. It consists of a website with authentication, where you can rent books.",
+    "viewCode": "View Code",
+    "viewSite": "View Site"
+  },
+  "projectTodo": {
+    "title": "TodoList",
+    "todoDesc": "Todo List project built with React and the useState hook, focused on practicing modern JavaScript, React fundamentals, and styling using CSS Modules.",
     "viewCode": "View Code",
     "viewSite": "View Site"
   },

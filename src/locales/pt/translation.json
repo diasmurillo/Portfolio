@@ -19,13 +19,22 @@
     "title": "Tecnologias"
   },
   "projects": {
+    "title": "Projetos"
+  },
+  "projectPortfolio": {
     "title": "Portfolio",
     "portfolioDesc": "Portfólio criado com React + Vite, estilizado com Tailwind e suporte a tradução com i18n.",
     "viewCode": "Ver Código"
   },
-   "projectLibrary": {
+  "projectLibrary": {
     "title": "Biblioteca",
     "libraryDesc": "Projeto criado com React + Vite, estilizado com Tailwind. Consiste em um site com autenticação, onde pode ser feito o aluguel de livros.",
+    "viewCode": "Ver Código",
+    "viewSite": "Ver Site"
+  },
+  "projectTodo": {
+    "title": "Lista de tarefas",
+    "todoDesc": "Projeto de lista de tarefas criado com React + Vite com foco na prática de JavaScript moderno e uso do hook useState, ",
     "viewCode": "Ver Código",
     "viewSite": "Ver Site"
   },
